@@ -5,7 +5,7 @@ import boto3
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 
-from api.setting import DEFAULT_API_KEYS
+from api.setting import DEFAULT_API_KEY
 
 api_key_param = os.environ.get("API_KEY_PARAM_NAME")
 if api_key_param:
@@ -14,7 +14,7 @@ if api_key_param:
         "Value"
     ]
 else:
-    api_key = DEFAULT_API_KEYS
+    api_key = DEFAULT_API_KEY
 
 security = HTTPBearer()
 

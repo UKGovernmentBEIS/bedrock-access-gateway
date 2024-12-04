@@ -1,6 +1,6 @@
 import os
 
-DEFAULT_API_KEYS = "bedrock"
+DEFAULT_API_KEY = os.environ.get("BEDROCK_PROXY_API_KEY", "bedrock")
 
 API_ROUTE_PREFIX = "/api/v1"
 
